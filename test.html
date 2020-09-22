@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lol</title>
+    <script src="https://kit.fontawesome.com/0ce076d21c.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #196db8;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        .standard-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .circle {
+            width: 0;
+            height: 0;
+            background: #1f1f1f;
+            border-radius: 50%;
+            z-index: -1;
+            position: fixed;
+            margin: auto;
+            left: -80px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transition: 1s ease-in;
+        }
+        .more_circle {
+            width: 9999px;
+            height: 9999px;
+        }
+        .to_up {
+            padding: 8px 20px;
+            border: 1px solid #196db8;
+            color: white;
+            transition: 0.3s ease;
+            font-size: 14px !important;
+        }
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .center h2 {
+            color: white;
+            font-weight: 300;
+            font-size: 18px;
+            padding: 10px;
+        }
+        .center h3 {
+            color: white;
+            font-weight: 300;
+            font-size: 14px;
+            padding: 10px;
+            letter-spacing: 10px;
+        }
+        #transform {
+            font-size: 150px;
+        }
+        h1 {
+            font-weight: bold;
+        }
+        .content {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .width .up,
+        .width2 .down {
+            transform: rotate(5deg);
+        }
+        .width .down,
+        .width2 .up {
+            transform: rotate(-5deg);
+        }
+        .width .up .block,
+        .width2 .down .block {
+            transform: skew(-20deg);
+        }
+        .width .down .block,
+        .width2 .up .block {
+            transform: skew(20deg);
+        }
+        .up, .down {
+            display: flex;
+        }
+        .width2 .block {
+            transform: skew(-20deg);
+        }
+
+        @keyframes width {
+            100% {
+                width: 300px;
+            }
+        }
+        .block {
+            width: 75px;
+            height: 50px;
+            background: black;
+            border: 1px solid yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family:'Arial', sans-serif;
+            transition: 0.3s ease;
+            cursor: pointer;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        /*.circle {*/
+        /*    width: 300px;*/
+        /*    height: 300px;*/
+        /*    background: black;*/
+        /*    border-radius: 50%;*/
+        /*}*/
+        .block1:hover,
+        .block2:hover,
+        .block3:hover,
+        .block4:hover{
+            width: 100px;
+            background: white;
+            color: black;
+        }
+        input[type='file'] {
+            width: 0;
+            height: 0;
+        }
+        #fileLabel {
+            border: 3px solid #737373;
+            padding: 20px;
+            font-weight: 700;
+            color: #737373;
+            cursor: pointer;
+        }
+        #fileLabel:hover {
+            box-shadow: 2px 2px 24px rgba(48, 42, 42, .2);
+        }
+        .pr p {
+            color: purple !important;
+        }
+        .ai p {
+            color: #ffb700 !important;
+        }
+        .photoshop {
+            padding: 10px;
+            background: #1f1f1f;
+            border: 6px solid white;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+            align-items: center;
+            margin: 80px;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        .photoshop:hover {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.32);
+        }
+        /*.photoshop::before {*/
+        /*    content: '';*/
+        /*    position: absolute;*/
+        /*    left: 2px;*/
+        /*    top: 2px;*/
+        /*    z-index: -1;*/
+        /*    width: 105px;*/
+        /*    height: 105px;*/
+        /*    background: #1f1f1f;*/
+        /*}*/
+        .photoshop p {
+            font-size: 56px;
+            font-weight: 700;
+            color: #006bbe;
+            line-height: 60px;
+        }
+        p {
+            color: #b7b7b7;
+            font-weight: 700;
+            padding: 5px;
+            margin-top: 10px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+        p span {
+            font-weight: 500;
+        }
+        .vertical {
+            flex-direction: column;
+        }
+        #send-get-person {
+            margin: 45px 0 5px 5px;
+            padding: 5px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+            border: none;
+            background: white;
+            color: #1c99cb;
+            font-weight: bold;
+        }
+        .get-person {
+            margin: 45px 5px 5px 0;
+            border: none;
+            outline: none;
+            padding: 5px 5px 2px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s ease-in;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+        }
+        .get-person:focus {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+        }
+        #send-error {
+            display: none;
+            color: #cd0b0b;
+        }
+        .form {
+            border: 1px solid #eaeaea;
+            padding: 20px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+            min-width: 450px;
+            max-width: 950px;
+        }
+        .get-person {
+            max-width: 100px;
+        }
+        .next-or-before {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .next-or-before i {
+            font-size: 48px;
+        }
+        .from-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #b7b7b7;
+        }
+        .from-box span{
+            color: #b7b7b7;
+        }
+        .from-box .from {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+<!--<div class="content">-->
+<!--    <div class="width">-->
+<!--        <div class="up">-->
+<!--            <div class="block block1">Делать</div>-->
+<!--            <div class="block block2">Деньги</div>-->
+<!--            <div class="block block3">Блять</div>-->
+<!--            <div class="block block4">Вот-так</div>-->
+<!--        </div>-->
+<!--        <div class="down">-->
+<!--            <div class="block block1">Делать</div>-->
+<!--            <div class="block block2">Деньги</div>-->
+<!--            <div class="block block3">Блять</div>-->
+<!--            <div class="block block4">Вот-так</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="circle"></div>-->
+<!--    <div class="width2">-->
+<!--        <div class="up">-->
+<!--            <div class="block block1">Делать</div>-->
+<!--            <div class="block block2">Деньги</div>-->
+<!--            <div class="block block3">Блять</div>-->
+<!--            <div class="block block4">Вот-так</div>-->
+<!--        </div>-->
+<!--        <div class="down">-->
+<!--            <div class="block block1">Делать</div>-->
+<!--            <div class="block block2">Деньги</div>-->
+<!--            <div class="block block3">Блять</div>-->
+<!--            <div class="block block4">Вот-так</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="circle" class="circle"></div>-->
+
+<!--<div class="center">-->
+<!--    <h2 id="title"></h2>-->
+<!--    <h1 id="transform"></h1>-->
+<!--    <h3 id="subTitle"></h3>-->
+<!--</div>-->
+
+<!--<div class="standard-center">-->
+<!--    <div class="photoshop pr">-->
+<!--        <p>Pr</p>-->
+<!--    </div>-->
+<!--    <div class="photoshop">-->
+<!--        <p>Ps</p>-->
+<!--    </div>-->
+<!--    <div class="photoshop ai">-->
+<!--        <p>Ai</p>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="standard-center vertical">
+    <div class="form">
+        <div class="answer-person">
+            <p>Name: <span id="person-name"></span></p>
+            <p>Age: <span id="person-age"></span></p>
+            <p>Job: <span id="person-job"></span></p>
+            <p>Language: <span id="person-language"></span></p>
+            <div class="next-or-before">
+                <span id="before-person"><i class="fas fa-caret-left"></i></span>
+                <div class="from-box">
+                    <span>8</span>/ <span class="from">16</span>
+                </div>
+                <span id="after-person"><i class="fas fa-caret-right"></i></span>
+            </div>
+        </div>
+        <input type="text" id="get-person" class="get-person" placeholder="Min">
+        <button id="send-get-person">Get</button>
+        <span id="send-error">Not find...</span>
+    </div>
+</div>
+
+<script src="test.js"></script>
+</body>
+</html>.
