@@ -83,8 +83,14 @@
 //
 // }, 1000)
 
-//
-// Основной источник строк
+
+
+
+
+
+
+
+// // Основной источник строк
 // let str = ['. . .', '. . .', 'Предложение создано'];
 // // Выводимое сообщение
 // let message = '';
@@ -133,74 +139,113 @@
 // //
 // let interval1 = setInterval(interval, 1000)
 
-function logPerson() {
-    console.log(`Person: ${this.name}, ${this.age}, ${this.job} ${this.language || ''}`)
-}
-const arr = [
-    {
-        name: 'Michael',
-        age: 22,
-        job: 'Frontend'
-    },
-    {
-        name: 'Elena',
-        age: 19,
-        job: 'Backend',
-        language: 'Python'
-    }
-]
-function bind(context, fn) {
-    return function (...args) {
-        fn.apply(context, args)
-    }
-}
+
+
+
+
+
+
+// function logPerson() {
+//     console.log(`Person: ${this.name}, ${this.age}, ${this.job} ${this.language || ''}`)
+// }
+// const arr = [
+//     {
+//         name: 'Michael',
+//         age: 22,
+//         job: 'Frontend'
+//     },
+//     {
+//         name: 'Elena',
+//         age: 19,
+//         job: 'Backend',
+//         language: 'Python'
+//     }
+// ]
+// function bind(context, fn) {
+//     return function (...args) {
+//         fn.apply(context, args)
+//     }
+// }
 
 // bind(arr[0], logPerson)()
 // bind(arr[1], logPerson)()
 
 
-const personBoard = [
-    {
-        name: 'Michael',
-        age: 22,
-        job: 'Frontend',
-        language: '',
-        requestedWages: 3000
-    },
-    {
-        name: 'Elena',
-        age: 19,
-        job: 'Backend',
-        language: 'Python',
-        requestedWages: 5600
-    },
-]
-
-const personName = document.getElementById('person-name');
-const personAge = document.getElementById('person-age');
-const personJob = document.getElementById('person-job');
-const personLanguage = document.getElementById('person-language');
-const getPerson = document.getElementById('get-person');
-const sendGetPerson = document.getElementById('send-get-person');
-const sendError = document.getElementById('send-error');
-const beforePerson = document.getElementById('before-person');
-const afterPerson = document.getElementById('after-person');
-
-sendGetPerson.addEventListener('click', function () {
-    for (let i = 0; i < personBoard.length; i++) {
-        if (personBoard[i].requestedWages === +getPerson.value) {
-            personName.innerHTML = personBoard[i].name;
-            personAge.innerHTML = personBoard[i].age;
-            personJob.innerHTML = personBoard[i].job;
-            personLanguage.innerHTML = personBoard[i].language;
-            sendError.style.display = 'none';
-            break
-        } else {
-            personName.innerHTML = '';
-            personAge.innerHTML = '';
-            personJob.innerHTML = '';
-            personLanguage.innerHTML = '';
-            sendError.style.display = 'block';
-        }
-    }
-})
+// const personBoard = [
+//     {name: 'Michael',  age: 22, job: 'Frontend', language: '',       requestedWages: 4500},
+//     {name: 'Alexandr', age: 19, job: 'Backend',  language: 'Python', requestedWages: 5600},
+//     {name: 'Jaroslaw', age: 21, job: 'Backend',  language: 'Node',   requestedWages: 5600},
+//     {name: 'Anna',     age: 28, job: 'Frontend', language: 'Vue',    requestedWages: 4500},
+//     {name: 'Pavel',    age: 21, job: 'Backend',  language: 'Node',   requestedWages: 5600}
+// ]
+//
+// const personName      = document.getElementById('person-name');
+// const personAge       = document.getElementById('person-age');
+// const personJob       = document.getElementById('person-job');
+// const personLanguage  = document.getElementById('person-language');
+// const getPerson       = document.getElementById('get-person');
+// const sendGetPerson   = document.getElementById('send-get-person');
+// const sendError       = document.getElementById('send-error');
+// const beforePerson    = document.getElementById('before-person');
+// const afterPerson     = document.getElementById('after-person');
+// const allPersonFind   = document.getElementById('all-person-find');
+// const currentPerson   = document.getElementById('current-person');
+//
+// let foundedPerson = [];
+// let indexPerson = 0;
+// let currentIndex;
+// let inc = true;
+// let need = true;
+//
+// function sliderDisabled(paramsB, paramsA) {
+//     beforePerson.disabled = paramsB;
+//     afterPerson.disabled = paramsA;
+// }
+//
+// function changeParams() {
+//     currentIndex = foundedPerson[indexPerson];
+//     personName.innerHTML = personBoard[currentIndex].name;
+//     personAge.innerHTML = personBoard[currentIndex].age;
+//     personJob.innerHTML = personBoard[currentIndex].job;
+//     personLanguage.innerHTML = personBoard[currentIndex].language;
+//     if (inc) {
+//         indexPerson++;
+//         console.log(`++ / ${indexPerson} / ${foundedPerson} / ${currentIndex}`)
+//     } else {
+//         indexPerson--;
+//         console.log(`++ / ${indexPerson} / ${foundedPerson} / ${currentIndex}`)
+//     }
+//     currentPerson.innerHTML = indexPerson;
+// }
+//
+// beforePerson.addEventListener('click', () => {
+//     inc = false;
+//     changeParams()
+// });
+//
+// afterPerson.addEventListener('click', () => {
+//     inc = true;
+//     changeParams()
+// })
+//
+// sendGetPerson.addEventListener('click', function () {
+//     personName.innerHTML = '';
+//     personAge.innerHTML = '';
+//     personJob.innerHTML = '';
+//     personLanguage.innerHTML = '';
+//     sendError.style.display = 'block';
+//     foundedPerson = [];
+//     indexPerson = 0;
+//     allPersonFind.innerHTML = 0
+//     for (let i = 0; i < personBoard.length; i++) {
+//         if (personBoard[i].requestedWages === +getPerson.value) {
+//             foundedPerson.push(i)
+//             allPersonFind.innerHTML = foundedPerson.length
+//             sendError.style.display = 'none';
+//             if (need) {
+//                 changeParams()
+//                 need = false
+//             }
+//         }
+//     }
+// })

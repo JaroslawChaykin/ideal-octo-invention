@@ -244,6 +244,10 @@
         .next-or-before i {
             font-size: 48px;
         }
+        .next-or-before button {
+            background: none;
+            border: none;
+        }
         .from-box {
             display: flex;
             justify-content: center;
@@ -257,9 +261,19 @@
         .from-box .from {
             font-weight: 700;
         }
+        #before-person,
+        #after-person {
+            opacity: 0.5;
+        }
+
+        #before-person:hover,
+        #after-person:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
+<div id="transform"></div>
 
 <!--<div class="content">-->
 <!--    <div class="width">-->
@@ -315,16 +329,16 @@
 <div class="standard-center vertical">
     <div class="form">
         <div class="answer-person">
-            <p>Name: <span id="person-name"></span></p>
-            <p>Age: <span id="person-age"></span></p>
-            <p>Job: <span id="person-job"></span></p>
-            <p>Language: <span id="person-language"></span></p>
+            <p>Name | <span id="person-name"></span></p>
+            <p>Age | <span id="person-age"></span></p>
+            <p>Job | <span id="person-job"></span></p>
+            <p>Language | <span id="person-language"></span></p>
             <div class="next-or-before">
-                <span id="before-person"><i class="fas fa-caret-left"></i></span>
+                <button id="before-person"><i class="fas fa-caret-left"></i></button>
                 <div class="from-box">
-                    <span>8</span>/ <span class="from">16</span>
+                    <span id="current-person">0</span>/ <span id="all-person-find" class="from">0</span>
                 </div>
-                <span id="after-person"><i class="fas fa-caret-right"></i></span>
+                <button id="after-person"><i class="fas fa-caret-right"></i></button>
             </div>
         </div>
         <input type="text" id="get-person" class="get-person" placeholder="Min">
