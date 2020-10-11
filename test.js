@@ -249,3 +249,25 @@
 //         }
 //     }
 // })
+
+
+
+
+function changeInt(int) {
+
+    let x = String(int).split('')
+
+    if (int >= 1000 && int < 1000000) {
+        return `${x[0]}.${x[1]} тыс`
+    } else if (int >= 1000000 && int < 1000000000) {
+        return `${x[0]}.${x[1]} млн`
+    } else if (int >= 1000000000) {
+        return `${x[0]}.${x[1]} млрд`
+    } else {
+        return int
+    }
+
+
+}
+
+console.log(changeInt(52))
