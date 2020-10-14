@@ -2,8 +2,10 @@ let blocks = document.querySelector('.container');
 
 
 function startGame(id) {
-    console.log(id)
+    let randomBlock = Math.ceil(Math.random() * 9)
+    console.log(`${randomBlock} ${id}`)
 }
+
 blocks.onclick = function(e) {
     let elem = e ? e.target : window.event.srcElement;
 
