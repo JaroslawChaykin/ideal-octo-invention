@@ -253,21 +253,30 @@
 
 
 
-function changeInt(int) {
+// function changeInt(int) {
+//
+//     let x = String(int).split('')
+//
+//     if (int >= 1000 && int < 1000000) {
+//         return `${x[0]}.${x[1]} тыс`
+//     } else if (int >= 1000000 && int < 1000000000) {
+//         return `${x[0]}.${x[1]} млн`
+//     } else if (int >= 1000000000) {
+//         return `${x[0]}.${x[1]} млрд`
+//     } else {
+//         return int
+//     }
+//
+//
+// }
+//
+// console.log(changeInt(52))
 
-    let x = String(int).split('')
+function double(mas) {
+    for (let i = 0; i < mas.length; i++) {
 
-    if (int >= 1000 && int < 1000000) {
-        return `${x[0]}.${x[1]} тыс`
-    } else if (int >= 1000000 && int < 1000000000) {
-        return `${x[0]}.${x[1]} млн`
-    } else if (int >= 1000000000) {
-        return `${x[0]}.${x[1]} млрд`
-    } else {
-        return int
     }
-
 
 }
 
-console.log(changeInt(52))
+console.log(double([7, 2, 8, 2, 8, 9, 7]))
