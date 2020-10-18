@@ -2,8 +2,14 @@ let blocks = document.querySelector('.container');
 
 
 function startGame(id) {
-    let randomBlock = Math.ceil(Math.random() * 9)
-    console.log(`${randomBlock} ${id}`)
+    let j = 0;
+    let blockGenerated = [];
+    for (let i = 0; i <= j; i++) {
+        let randomBlock = Math.ceil(Math.random() * 9);
+        let styleToBlock = document.getElementById(`${randomBlock}`);
+        console.log(`${randomBlock} ${id}`);
+        styleToBlock.style.background = 'black';
+    }
 }
 
 blocks.onclick = function(e) {
@@ -17,5 +23,7 @@ blocks.onclick = function(e) {
     } else {
         id = elem.id;
     }
-    startGame(id)
+    if (id === 'v') {
+        startGame(id)
+    }
 }
