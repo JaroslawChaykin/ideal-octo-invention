@@ -272,11 +272,36 @@
 //
 // console.log(changeInt(52))
 
-function double(mas) {
-    for (let i = 0; i < mas.length; i++) {
+// function double(mas) {
+//     for (let i = 0; i < mas.length; i++) {
+//
+//     }
+//
+// }
+//
+// console.log(double([7, 2, 8, 2, 8, 9, 7]))
+let person = {
+    name: "Jaroslaw",
+    age: 21,
+    getHello: function () {
+        return `${this.name} Hello, your age ${this.age}`
+    },
+}
+let person2 = Object.create(person)
 
+person2.name = 'Lena';
+person2.age = 43;
+
+
+console.log(person.getHello())
+console.log(person2.getHello())
+function urlGenerator(domain) {
+    return function (url) {
+        return `https://${url}.${domain}`
     }
-
 }
 
-console.log(double([7, 2, 8, 2, 8, 9, 7]))
+const comUrl = urlGenerator('com')
+const ruUrl = urlGenerator('ru')
+
+console.log(comUrl('google'))
