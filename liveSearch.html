@@ -27,7 +27,7 @@
         input {
             margin-bottom: 20px;
             padding: 5px 15px;
-            border: 1px solid black;
+            border: 3px solid black;
         }
         ol {
             list-style: none;
@@ -41,6 +41,9 @@
         .hide {
             display: none;
         }
+        .wrong {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -48,18 +51,20 @@
     <div class="wrap">
         <h1 class="h1">Live search</h1>
         <input type="text" class="input" id="input" placeholder="Search..."/>
-        <div>
-            <ol class="ul">
-                <li>Яблоко</li>
-                <li>Банан</li>
-                <li>Орех</li>
-                <li>Баран</li>
-                <li>Поезд</li>
-                <li>Трамвай</li>
-                <li>Штора</li>
-                <li>Бардак</li>
-                <li>Гендер</li>
-            </ol>
+        <div class="wrong hide">
+            Пароль не содержит цифр
+
+<!--            <ol class="ul">-->
+<!--                <li>Яблоко</li>-->
+<!--                <li>Банан</li>-->
+<!--                <li>Орех</li>-->
+<!--                <li>Баран</li>-->
+<!--                <li>Поезд</li>-->
+<!--                <li>Трамвай</li>-->
+<!--                <li>Штора</li>-->
+<!--                <li>Бардак</li>-->
+<!--                <li>Гендер</li>-->
+<!--            </ol>-->
         </div>
     </div>
 
