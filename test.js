@@ -306,10 +306,22 @@
 //
 // console.log(comUrl('google'))
 
-let arr = ['3', 'b', 'v', 'd'];
+const a1 = [1, 5, 2, , 5];
 
-arr.forEach(elem => {
-    if (!isNaN(elem)) {
-        console.log(elem)
-    }
+let but = document.querySelector('#b1');
+function f1(i) {
+    let a1_res = i.map(item => {
+        return item * 3
+    });
+    console.log(a1)
+    console.log(a1_res)
+}
+
+but.addEventListener(`click`, function () {
+    f1(a1);
 })
+
+
+
+
+
