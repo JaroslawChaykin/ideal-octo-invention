@@ -272,11 +272,70 @@
 //
 // console.log(changeInt(52))
 
-function double(mas) {
-    for (let i = 0; i < mas.length; i++) {
+// function double(mas) {
+//     for (let i = 0; i < mas.length; i++) {
+//
+//     }
+//
+// }
+//
+// console.log(double([7, 2, 8, 2, 8, 9, 7]))
+// let person = {
+//     name: "Jaroslaw",
+//     age: 21,
+//     getHello: function () {
+//         return `${this.name} Hello, your age ${this.age}`
+//     },
+// }
+// let person2 = Object.create(person)
+//
+// person2.name = 'Lena';
+// person2.age = 43;
+//
+//
+// console.log(person.getHello())
+// console.log(person2.getHello())
+// function urlGenerator(domain) {
+//     return function (url) {
+//         return `https://${url}.${domain}`
+//     }
+// }
+//
+// const comUrl = urlGenerator('com')
+// const ruUrl = urlGenerator('ru')
+//
+// console.log(comUrl('google'))
 
-    }
+const a1 = [1, 5, 2, 0, 6];
 
+let b = a1.filter(item => {
+    return item * 3
+})
+let c = a1.map(item => {
+    return item * 3
+})
+console.log(b)
+console.log(c)
+if (~a1.indexOf(5)) {
+    console.log('yes')
+} else {
+    console.log('no')
 }
 
-console.log(double([7, 2, 8, 2, 8, 9, 7]))
+// let but = document.querySelector('#b1');
+// function f1(i) {
+//     let a1_res = i.map(item => {
+//         return item * 3
+//     });
+//     console.log(a1)
+//     console.log(a1_res)
+// }
+//
+// but.addEventListener(`click`, function () {
+//     f1(a1);
+// })
+
+
+
+
+
