@@ -306,21 +306,21 @@
 //
 // console.log(comUrl('google'))
 
-const a1 = [1, 5, 2, 0, 6];
-
-let b = a1.filter(item => {
-    return item * 3
-})
-let c = a1.map(item => {
-    return item * 3
-})
-console.log(b)
-console.log(c)
-if (~a1.indexOf(5)) {
-    console.log('yes')
-} else {
-    console.log('no')
-}
+// const a1 = [1, 5, 2, 0, 6];
+//
+// let b = a1.filter(item => {
+//     return item * 3
+// })
+// let c = a1.map(item => {
+//     return item * 3
+// })
+// console.log(b)
+// console.log(c)
+// if (~a1.indexOf(5)) {
+//     console.log('yes')
+// } else {
+//     console.log('no')
+// }
 
 // let but = document.querySelector('#b1');
 // function f1(i) {
@@ -335,6 +335,25 @@ if (~a1.indexOf(5)) {
 //     f1(a1);
 // })
 
+const num = document.getElementById('number');
+const sendNum = document.getElementById('send-num');
+let generatedBox = document.getElementById('generated');
+
+sendNum.addEventListener('click', function () {
+    let twoNumber = num.value.split('-');
+    for (let i = 0; i < twoNumber[0]; i++) {
+        let rowBox = document.createElement('div');
+        rowBox.className = 'generated-row';
+        rowBox.id = `gen-${i}`;
+        generatedBox.append(rowBox)
+        for (let j = 0; j < twoNumber[1]; j++) {
+            let nowRow = document.getElementById(`gen-${i}`)
+            let rowBoxEl = document.createElement('div');
+            rowBoxEl.className = 'gen-block';
+            nowRow.append(rowBoxEl);
+        }
+    }
+})
 
 
 

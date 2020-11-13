@@ -270,6 +270,15 @@
         #after-person:hover {
             opacity: 1;
         }
+        .gen-block {
+            width: 10px;
+            height: 10px;
+            background: black;
+            border: 1px solid white;
+        }
+        .generated-row {
+            display: flex;
+        }
     </style>
 </head>
 <body>
@@ -346,9 +355,18 @@
 <!--        <span id="send-error">Not find...</span>-->
 <!--    </div>-->
 <!--</div>-->
-<div for="b1" id="label"></div>
-<button id="b1">Жми</button>
-<div class="log">Result</div>
+
+<!--<div for="b1" id="label"></div>-->
+<!--<button id="b1">Жми</button>-->
+<!--<div class="log">Result</div>-->
+
+<input type="text" id="number" placeholder="Строки-Столбцы">
+<button id="send-num">ГЕН</button>
+
+<div id="generated">
+
+
+</div>
 
 <script src="test.js"></script>
 </body>
