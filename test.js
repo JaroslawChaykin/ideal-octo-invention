@@ -339,7 +339,7 @@ const num = document.getElementById('number');
 const sendNum = document.getElementById('send-num');
 let generatedBox = document.getElementById('generated');
 
-sendNum.addEventListener('click', function () {
+function generatedBlocks() {
     let twoNumber = num.value.split('-');
     for (let i = 0; i < twoNumber[0]; i++) {
         let rowBox = document.createElement('div');
@@ -353,7 +353,9 @@ sendNum.addEventListener('click', function () {
             nowRow.append(rowBoxEl);
         }
     }
-})
+}
+
+sendNum.addEventListener('click', generatedBlocks)
 
 
 
