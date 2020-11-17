@@ -6,6 +6,6 @@ const person = new Object({
     },
 })
 
-Object.prototype.constructor.sayHello = function decrease() {
-    console.log('Hello')
+Object.prototype.sayHello = function decrease() {
+    console.log(this.greet())
 }
