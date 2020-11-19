@@ -335,28 +335,27 @@
 //     f1(a1);
 // })
 
-const num = document.getElementById('number');
-const sendNum = document.getElementById('send-num');
-let generatedBox = document.getElementById('generated');
-
-function generatedBlocks() {
-    let twoNumber = num.value.split('-');
-    for (let i = 0; i < twoNumber[0]; i++) {
-        let rowBox = document.createElement('div');
-        rowBox.className = 'generated-row';
-        rowBox.id = `gen-${i}`;
-        generatedBox.append(rowBox)
-        for (let j = 0; j < twoNumber[1]; j++) {
-            let nowRow = document.getElementById(`gen-${i}`)
-            let rowBoxEl = document.createElement('div');
-            rowBoxEl.className = 'gen-block';
-            nowRow.append(rowBoxEl);
-        }
-    }
-}
-
-sendNum.addEventListener('click', generatedBlocks)
-
+// const num = document.getElementById('number');
+// const sendNum = document.getElementById('send-num');
+// let generatedBox = document.getElementById('generated');
+//
+// function generatedBlocks() {
+//     let twoNumber = num.value.split('-');
+//     for (let i = 0; i < twoNumber[0]; i++) {
+//         let rowBox = document.createElement('div');
+//         rowBox.className = 'generated-row';
+//         rowBox.id = `gen-${i}`;
+//         generatedBox.append(rowBox)
+//         for (let j = 0; j < twoNumber[1]; j++) {
+//             let nowRow = document.getElementById(`gen-${i}`)
+//             let rowBoxEl = document.createElement('div');
+//             rowBoxEl.className = 'gen-block';
+//             nowRow.append(rowBoxEl);
+//         }
+//     }
+// }
+//
+// sendNum.addEventListener('click', generatedBlocks)
 
 
 
