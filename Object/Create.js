@@ -1,4 +1,10 @@
-const person = Object.create({}, {
+const person = Object.create(
+    {
+        calculateAge() {
+            console.log(new Date().getFullYear() - this.birthYear)
+        }
+    },
+    {
     name: {
         value: 'Jaroslaw', // Значение
         enumerable: true, // Видно при перечислении
