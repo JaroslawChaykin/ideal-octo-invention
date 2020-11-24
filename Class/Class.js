@@ -37,6 +37,3 @@ const dog = new Animal({
     hasTail: false,
     animalVoice: 'Gav'
 })
-
-console.log(boris);
-dog.voice()
