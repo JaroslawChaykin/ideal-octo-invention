@@ -1,8 +1,4 @@
-const person = {
-    name: 'Jaroslaw',
-    age: 21,
-    job: 'FrontEnd'
-}
+
 const op = new Proxy(person, {
     get(target, prop) {
         return target[prop]
