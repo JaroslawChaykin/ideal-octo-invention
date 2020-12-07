@@ -6,10 +6,52 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cart</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading {
+            width: 250px;
+            text-align: center;
+            padding: 5px 15px;
+            background: #e0e0e0;
+            font-family: sans-serif;
+            color: white;
+            position: relative;
+        }
+        .loaded {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(129, 127, 127, 0.25);
+            width: 0;
+            z-index: 0;
+            height: 100%;
+
+        }
+        .label {
+            z-index: 999;
+        }
+
+    </style>
 </head>
 <body>
-
-<div class="loading">Загрузка сейчас начнется</div>
+<div class="container">
+    <div class="loading">
+        <div class="loaded"></div>
+        <div class="label">Загрузка сейчас начнется</div>
+    </div>
+</div>
 
 <script src="ShoppingСart.js"></script>
 </body>
