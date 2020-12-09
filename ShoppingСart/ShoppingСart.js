@@ -8,10 +8,11 @@ function loading() {
         load.innerHTML = `Loading ${num}%`;
         loaded.style.width = num + '%';
         if (num === 101) {
+            loaded.style.width = 0 + '%';
             load.innerHTML = `Загрузка завершена!`;
             clearInterval(interval1)
         }
-    }, 100)
+    }, 30)
 }
 
 loading()
