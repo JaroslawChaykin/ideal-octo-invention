@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open sans", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.header {
+  border-bottom: 1px solid #eeeeee;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+}
+.header-row {
+  height: 100%;
+  line-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-row .header-row__logo {
+  font-weight: 900;
+  font-size: 32px;
+}
+.header-row .header-row__cart {
+  padding: 0 25px;
+}
+.header-row .header-row__cart:hover {
+  background: #1f1f1f;
+  color: white;
+  cursor: pointer;
+}
+.content {
+  margin-top: 100px;
+}
+.content-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cart {
+  width: 25%;
+}
+.cart-box:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  background: #1f1f1f;
+}
+.cart-box:hover .cart-text {
+  color: white;
+}
+.cart-box:hover .cart-text .cart-text__price p {
+  border: 1px solid white;
+}
+.cart-box {
+  background: white;
+  border: 1px solid #eeeeee;
+  border-radius: 15px;
+  margin: 15px;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+.cart .cart__image {
+  text-align: center;
+  padding: 5px;
+  height: 200px;
+  background: white;
+  border-radius: 0 0 15px 15px;
+}
+.cart .cart__image img {
+  height: 100%;
+}
+.cart .cart-text {
+  padding: 15px;
+}
+.cart .cart-text .cart-text__label {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+.cart .cart-text .cart-text__description {
+  margin-bottom: 25px;
+}
+.cart .cart-text .cart-text__price {
+  font-weight: 500;
+  font-size: 24px;
+  display: flex;
+}
+.cart .cart-text .cart-text__price p{
+  border: 1px solid #1f1f1f;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+ /*Это другое*/
+/*.container {*/
+/*  width: 1200px;*/
+/*  margin: 0 auto;*/
+/*  height: 100vh;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.loading {*/
+/*  width: 250px;*/
+/*  text-align: center;*/
+/*  padding: 5px 15px;*/
+/*  background: #e0e0e0;*/
+/*  font-family: sans-serif;*/
+/*  color: white;*/
+/*  position: relative;*/
+/*}*/
+/*.loaded {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  background: rgba(129, 127, 127, 0.25);*/
+/*  width: 0;*/
+/*  z-index: 0;*/
+/*  height: 100%;*/
+
+/*}*/
+/*.label {*/
+/*  z-index: 999;*/
+/*}*/
+
+ /*А это то что надо*/
+
