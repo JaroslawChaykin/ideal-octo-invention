@@ -3,12 +3,13 @@
   margin: 0;
   font-family: "Open sans", sans-serif;
   box-sizing: border-box;
+  color: #1f1f1f;
 }
 body {
   background: #fcfcfc;
 }
 .container {
-  width: 1200px;
+  width: 1300px;
   margin: 0 auto;
   height: 100%;
 }
@@ -19,6 +20,7 @@ body {
   right: 0;
   left: 0;
   backdrop-filter: blur(10px);
+  z-index: 1;
 }
 .header-row {
   height: 100%;
@@ -42,6 +44,9 @@ body {
 .content {
   margin-top: 100px;
 }
+.content-2 {
+  margin-top: 100px;
+}
 .content-box {
   display: flex;
   flex-wrap: wrap;
@@ -63,13 +68,14 @@ body {
 }
 .cart .cart__image {
   text-align: center;
-  padding: 5px;
+  margin: 5px 15px;
   height: 200px;
   background: white;
-  border-radius: 0 0 15px 15px;
+  border-bottom: 1px solid #eeeeee;
 }
 .cart .cart__image img {
   height: 100%;
+  padding-bottom: 10px  ;
 }
 .cart .cart-text {
   padding: 15px;
@@ -96,10 +102,6 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
-
-
-
-
 .cart .cart-text .cart-text__price p:before {
   content: '';
   position: absolute;
@@ -126,6 +128,10 @@ body {
   cursor: pointer;
   background: #1f1f1f;
   color: white;
+}
+
+.content-2 {
+  display: none;
 }
 /*Это другое*/
 /*.container {*/
