@@ -3,9 +3,13 @@
   margin: 0;
   font-family: "Open sans", sans-serif;
   box-sizing: border-box;
+  color: #1f1f1f;
+}
+body {
+  background: #fcfcfc;
 }
 .container {
-  width: 1200px;
+  width: 1300px;
   margin: 0 auto;
   height: 100%;
 }
@@ -16,6 +20,7 @@
   right: 0;
   left: 0;
   backdrop-filter: blur(10px);
+  z-index: 1;
 }
 .header-row {
   height: 100%;
@@ -39,6 +44,9 @@
 .content {
   margin-top: 100px;
 }
+.content-2 {
+  margin-top: 100px;
+}
 .content-box {
   display: flex;
   flex-wrap: wrap;
@@ -48,31 +56,26 @@
 }
 .cart-box:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
-  background: #1f1f1f;
-}
-.cart-box:hover .cart-text {
-  color: white;
-}
-.cart-box:hover .cart-text .cart-text__price p {
-  border: 1px solid white;
+  /*background: #efefef;*/
 }
 .cart-box {
   background: white;
   border: 1px solid #eeeeee;
   border-radius: 15px;
-  margin: 15px;
+  margin: 10px;
   transition: all 0.2s;
   overflow: hidden;
 }
 .cart .cart__image {
   text-align: center;
-  padding: 5px;
+  margin: 5px 15px;
   height: 200px;
   background: white;
-  border-radius: 0 0 15px 15px;
+  border-bottom: 1px solid #eeeeee;
 }
 .cart .cart__image img {
   height: 100%;
+  padding-bottom: 10px  ;
 }
 .cart .cart-text {
   padding: 15px;
@@ -87,15 +90,50 @@
 }
 .cart .cart-text .cart-text__price {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   display: flex;
+  justify-content: flex-end;
 }
-.cart .cart-text .cart-text__price p{
-  border: 1px solid #1f1f1f;
+.cart .cart-text .cart-text__price p {
+  padding: 10px;
+  background: #f1f1f1;
+  transition: all 0.4s;
+  position: relative;
   border-radius: 10px;
-  padding: 5px 15px;
+  overflow: hidden;
 }
- /*Это другое*/
+.cart .cart-text .cart-text__price p:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #1f1f1f;
+  transition: all 0.4s;
+}
+.cart-box:hover .cart-text .cart-text__price p {
+  background: #1f1f1f;
+  color: white;
+}
+.cart_button button {
+  /*margin-bottom: 20px;*/
+  width: 100%;
+  border: none;
+  line-height: 55px;
+  transition: all 0.2s;
+  background: white;
+}
+.cart-box:hover .cart_button button {
+  cursor: pointer;
+  background: #1f1f1f;
+  color: white;
+}
+
+.content-2 {
+  display: none;
+}
+/*Это другое*/
 /*.container {*/
 /*  width: 1200px;*/
 /*  margin: 0 auto;*/
@@ -128,5 +166,5 @@
 /*  z-index: 999;*/
 /*}*/
 
- /*А это то что надо*/
+/*А это то что надо*/
 
