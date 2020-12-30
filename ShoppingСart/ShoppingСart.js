@@ -23,7 +23,7 @@ const contentOne = document.querySelector('.content');
 const contentTwo = document.querySelector('.content-2');
 let num = 0;
 
-shopCart.addEventListener('click', () => {
+shopCart.addEventListener('click', function () {
     if (num === 0) {
         contentTwo.style.display = 'block';
         contentOne.style.display = 'none';
@@ -36,3 +36,43 @@ shopCart.addEventListener('click', () => {
         shopCart.innerText = 'КОРЗИНА';
     }
 })
+
+const product = document.querySelectorAll('.card');
+const addToCart = document.querySelectorAll('.button-card');
+const productBox = document.querySelector('.product-box');
+
+function creatingLotInCart(name, description, price) {
+    let productItem = document.createElement('div');
+    let productItemName = document.createElement('div');
+    let productItemDescription = document.createElement('div');
+    let productItemPrice = document.createElement('div');
+
+
+    productItemName.classList.add('product-name');
+    productItemName.innerHTML = name;
+
+    productItemDescription.classList.add('product-description')
+    productItemDescription.innerText = description;
+
+    productItemPrice.classList.add('product-price');
+    productItemPrice.innerText = price;
+
+    productItem.appendChild(productItemName)
+    productItem.appendChild(productItemDescription)
+    productItem.appendChild(productItemPrice)
+
+    productBox.appendChild(productItem)
+
+}
+
+
+for (let i = 0; i < addToCart.length ; i++) {
+    addToCart[i].addEventListener('click', function() {
+        let nameProduct = product[i].querySelector('.card-text__label').innerText;
+        let descriptionProduct = product[i].querySelector('.card-text__description').innerText;
+        let priceProduct = product[i].querySelector('.card-text__price').innerText;
+        product[i].remove()
+        creatingLotInCart(nameProduct, descriptionProduct, priceProduct);
+    })
+}
+
