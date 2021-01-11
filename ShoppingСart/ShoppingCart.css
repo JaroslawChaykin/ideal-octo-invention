@@ -51,14 +51,14 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.cart {
+.card {
   width: 25%;
 }
-.cart-box:hover {
+.card-box:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
   /*background: #efefef;*/
 }
-.cart-box {
+.card-box {
   background: white;
   border: 1px solid #eeeeee;
   border-radius: 15px;
@@ -66,35 +66,37 @@ body {
   transition: all 0.2s;
   overflow: hidden;
 }
-.cart .cart__image {
+.card .card__image {
   text-align: center;
   margin: 5px 15px;
   height: 200px;
   background: white;
   border-bottom: 1px solid #eeeeee;
 }
-.cart .cart__image img {
+.card .card__image img {
   height: 100%;
   padding-bottom: 10px  ;
 }
-.cart .cart-text {
+.card .card-text {
   padding: 15px;
 }
-.cart .cart-text .cart-text__label {
+.card .card-text .card-text__label {
   font-size: 24px;
   font-weight: 900;
   margin-bottom: 15px;
 }
-.cart .cart-text .cart-text__description {
+.card .card-text .card-text__description {
   margin-bottom: 25px;
+  height: 75px;
+  overflow: hidden;
 }
-.cart .cart-text .cart-text__price {
+.card .card-text .card-text__price {
   font-weight: 500;
   font-size: 18px;
   display: flex;
   justify-content: flex-end;
 }
-.cart .cart-text .cart-text__price p {
+.card .card-text .card-text__price p {
   padding: 10px;
   background: #f1f1f1;
   transition: all 0.4s;
@@ -102,7 +104,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
-.cart .cart-text .cart-text__price p:before {
+.card .card-text .card-text__price p:before {
   content: '';
   position: absolute;
   top: 0;
@@ -112,11 +114,11 @@ body {
   background: #1f1f1f;
   transition: all 0.4s;
 }
-.cart-box:hover .cart-text .cart-text__price p {
+.card-box:hover .card-text .card-text__price p {
   background: #1f1f1f;
   color: white;
 }
-.cart_button button {
+.card_button button {
   /*margin-bottom: 20px;*/
   width: 100%;
   border: none;
@@ -124,7 +126,7 @@ body {
   transition: all 0.2s;
   background: white;
 }
-.cart-box:hover .cart_button button {
+.card-box:hover .card_button button {
   cursor: pointer;
   background: #1f1f1f;
   color: white;
