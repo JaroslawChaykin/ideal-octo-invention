@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          color: #196db8;
+          font-family: sans-serif;
+          box-sizing: border-box;
+      }
+      body {
+          background: #0a0a0a;
+      }
+      .block {
+          height: calc(100vh - 140px);
+          background: #0a0a0a;
+          border: 1px solid yellow;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-family:'Arial', sans-serif;
+          transition: 0.3s ease;
+          cursor: pointer;
+          opacity: 0;
+      }
+      #send-num:disabled {
+          color: red;
+          cursor: no-drop;
+          border-color: red;
+      }
+      #send-num:enabled:hover {
+          box-shadow: 0 2px 2px 0 #e8e8e8;
+      }
+      .box {
+          padding: 20px;
+      }
+      .transition {
+          transition: all 1s ease-in-out;
+          opacity: 1;
+      }
+      input, button {
+          margin: 20px;
+          padding: 15px 35px;
+          border: 1px solid #dddddd;
+          font-size: 24px;
+          color: #9f9f9f;
+          cursor: pointer;
+          background: transparent;
+      }
+  </style>
+</head>
+<body>
+<input type="text" id="number" autocomplete="off">
+<button id="send-num" disabled>click</button>
+
+<div class="box">
+  <div class="block"></div>
+</div>
+<script src="animatedText.js"></script>
+</body>
+</html>
